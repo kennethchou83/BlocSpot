@@ -1,0 +1,57 @@
+//
+//  AwesomeCounter.m
+//  BlocExercises
+//
+//  Created by Aaron on 6/10/14.
+//
+//
+
+#import "AwesomeCounter.h"
+
+@implementation AwesomeCounter
+
+- (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
+//
+//    if (number == otherNumber) {
+//        return [NSString stringWithFormat:@"%ld", number];
+//    }
+//    
+//    NSUInteger lowNumber, highNumber;
+//    
+//    if (number < otherNumber) {
+//        lowNumber = number;
+//        highNumber = otherNumber;
+//    }else{
+//        lowNumber = otherNumber;
+//        highNumber = number;
+//        }
+//    NSMutableString *stringNumber = [NSMutableString string];
+//    
+//    for (NSUInteger i = lowNumber; i <= highNumber; i++) {
+//        [stringNumber appendFormat:@"%ld", i];
+//    }
+//    return stringNumber;
+//}
+    if (number == otherNumber) {
+        return [NSString stringWithFormat:@"%ld", (long)number];
+    }
+    
+    NSInteger lowNumber, highNumber;
+    
+    if (number < otherNumber) {
+        lowNumber = number;
+        highNumber = otherNumber;
+    } else {
+        lowNumber = otherNumber;
+        highNumber = number;
+    }
+    
+    NSMutableString *returnString = [NSMutableString string];
+    
+    for (NSInteger i = lowNumber; i <= highNumber; i++) {
+        [returnString appendFormat:@"%ld", (long)i];
+    }
+    
+    return returnString;
+}@end
+
